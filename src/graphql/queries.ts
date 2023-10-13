@@ -73,20 +73,3 @@ export const listTodoLists = `query ListTodoLists(
   }
 }
 `;
-export const listTodoLists = `query ListTodoLists(
-  $filter: ModelTodoListFilterInput
-  $limit: Int
-  $nextToken: String
-) {
-  listTodoLists(filter: $filter, limit: $limit, nextToken: $nextToken) {
-    items {
-      id
-      createdAt
-      todos {
-        nextToken
-      }
-    }
-    nextToken
-  }
-}
-`;
